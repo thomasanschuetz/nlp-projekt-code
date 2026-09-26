@@ -1,0 +1,45 @@
+[nltk_data] Downloading package stopwords to /home/jovyan/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/jovyan/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /home/jovyan/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+============================================================
+Lade Daten aus data/Digital_Music.jsonl.gz...
+============================================================
+Geladene Zeilen: 130434
+
+Klassenverteilung im Datensatz:
+rating
+1      6136
+2      3159
+3      6392
+4     14129
+5    100618
+Name: count, dtype: int64
+============================================================
+Lade Daten aus data/Industrial_and_Scientific.jsonl.gz...
+============================================================
+Geladene Zeilen: 5183005
+
+Klassenverteilung im Datensatz:
+rating
+1     584133
+2     234763
+3     315792
+4     560932
+5    3487385
+Name: count, dtype: int64
+============================================================
+Lade Daten aus data/All_Beauty.jsonl.gz...
+============================================================
+Geladene Zeilen: 701528
+
+Klassenverteilung im Datensatz:
+rating
+1    102080
+2     43034
+3     56307
+4     79381
+5    420726
+Name: count, dtype: int64

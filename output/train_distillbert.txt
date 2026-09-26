@@ -1,0 +1,78 @@
+Lade Daten...
+Trainingsgröße: 120000, Testgröße: 30000
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Lade Tokenizer für 'distilbert-base-uncased'...
+config.json: 100%
+ 483/483 [00:00<00:00, 42.1kB/s]
+tokenizer_config.json: 100%
+ 48.0/48.0 [00:00<00:00, 5.04kB/s]
+vocab.txt: 
+ 232k/? [00:00<00:00, 6.78MB/s]
+tokenizer.json: 
+ 466k/? [00:00<00:00, 20.7MB/s]
+Tokenisiere Daten...
+Map: 100%
+ 120000/120000 [00:23<00:00, 4487.37 examples/s]
+Map: 100%
+ 30000/30000 [00:05<00:00, 4985.85 examples/s]
+Lade Modell 'distilbert-base-uncased'...
+model.safetensors: 100%
+ 268M/268M [00:04<00:00, 65.9MB/s]
+Loading weights: 100%
+ 100/100 [00:00<00:00, 638.93it/s, Materializing param=distilbert.transformer.layer.5.sa_layer_norm.weight]
+DistilBertForSequenceClassification LOAD REPORT from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Starte Modell-Training...
+/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  return super().apply(*args, **kwargs)  # type: ignore[misc]
+ [11250/11250 1:28:45, Epoch 3/3]
+Epoch	Training Loss	Validation Loss	Accuracy	F1 Macro	Precision Macro	Recall Macro
+1	0.960434	0.945554	0.822400	0.608805	0.626518	0.598829
+2	0.853614	0.940174	0.828967	0.603287	0.645031	0.589421
+3	0.699590	0.989988	0.826167	0.610402	0.634586	0.599156
+Writing model shards: 100%
+ 1/1 [00:00<00:00,  1.84it/s]
+/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  return super().apply(*args, **kwargs)  # type: ignore[misc]
+Writing model shards: 100%
+ 1/1 [00:00<00:00,  1.74it/s]
+/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  return super().apply(*args, **kwargs)  # type: ignore[misc]
+Writing model shards: 100%
+ 1/1 [00:00<00:00,  1.85it/s]
+There were missing keys in the checkpoint model loaded: ['distilbert.embeddings.LayerNorm.weight', 'distilbert.embeddings.LayerNorm.bias'].
+There were unexpected keys in the checkpoint model loaded: ['distilbert.embeddings.LayerNorm.beta', 'distilbert.embeddings.LayerNorm.gamma'].
+Speichere Modell und Tokenizer in '/kaggle/working/distilbert_amazon_model'...
+Writing model shards: 100%
+ 1/1 [00:00<00:00,  1.84it/s]
+Modell erfolgreich gespeichert!
+
+============================================================
+Finales Evaluation-Ergebnis auf dem Testset:
+/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  return super().apply(*args, **kwargs)  # type: ignore[misc]
+ [469/469 02:22]
+eval_loss: 0.9900
+eval_accuracy: 0.8262
+eval_f1_macro: 0.6104
+eval_precision_macro: 0.6346
+eval_recall_macro: 0.5992
+eval_runtime: 142.6534
+eval_samples_per_second: 210.3000
+eval_steps_per_second: 3.2880
+epoch: 3.0000
+

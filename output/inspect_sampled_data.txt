@@ -1,0 +1,31 @@
+Lade 'data/sampled_amazon_reviews.parquet'...
+
+============================================================
+Gesamtzahl der Zeilen im Datensatz: 150000
+============================================================
+
+1. Anzahl der Rezensionen pro Kategorie:
+category
+Digital_Music                50000
+Industrial_and_Scientific    50000
+All_Beauty                   50000
+Name: count, dtype: int64
+
+------------------------------------------------------------
+
+2. Verteilung der Ratings (1 bis 5 Sterne) pro Kategorie:
+rating                         1     2     3      4       5  Gesamt
+category                                                           
+All_Beauty                  7276  3067  4013   5658   29986   50000
+Digital_Music               2352  1211  2450   5416   38571   50000
+Industrial_and_Scientific   5635  2265  3046   5411   33643   50000
+Gesamt                     15263  6543  9509  16485  102200  150000
+
+------------------------------------------------------------
+
+3. Prozentuale Rating-Verteilung innerhalb jeder Kategorie:
+rating                           1       2       3        4        5
+category                                                            
+All_Beauty                 14.55 %  6.13 %  8.03 %  11.32 %  59.97 %
+Digital_Music                4.7 %  2.42 %   4.9 %  10.83 %  77.14 %
+Industrial_and_Scientific  11.27 %  4.53 %  6.09 %  10.82 %  67.29 %

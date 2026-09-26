@@ -1,0 +1,31 @@
+Lade Kategorie 'Digital_Music' aus data/Digital_Music.jsonl.gz...
+  -> Ursprüngliche Zeilen: 130434
+  -> Sampled Zeilen: 50000
+Lade Kategorie 'Industrial_and_Scientific' aus data/Industrial_and_Scientific.jsonl.gz...
+  -> Ursprüngliche Zeilen: 5183005
+  -> Sampled Zeilen: 50000
+Lade Kategorie 'All_Beauty' aus data/All_Beauty.jsonl.gz...
+  -> Ursprüngliche Zeilen: 701528
+  -> Sampled Zeilen: 50000
+
+============================================================
+Gesamt-DataFrame Form: (150000, 4)
+
+Verteilung der Kategorien im finalen Set:
+category
+Digital_Music                50000
+Industrial_and_Scientific    50000
+All_Beauty                   50000
+Name: count, dtype: int64
+
+Verteilung der Sterne im finalen Set:
+rating
+1     15263
+2      6543
+3      9509
+4     16485
+5    102200
+Name: count, dtype: int64
+
+Speichere finales DataFrame in 'sampled_amazon_reviews.parquet'...
+Fertig!

@@ -1,0 +1,44 @@
+Lade Datensatz 'data/sampled_amazon_reviews.parquet'...
+Trainingsdaten: 120000 | Testdaten: 30000
+
+Erstelle TF-IDF Features...
+
+============================================================
+Trainiere Modell 1: Logistic Regression (class_weight='balanced')
+============================================================
+Accuracy (LogReg): 0.6263
+
+Detaillierter Report:
+              precision    recall  f1-score   support
+
+           1       0.62      0.67      0.65      3053
+           2       0.18      0.31      0.23      1308
+           3       0.24      0.36      0.28      1902
+           4       0.24      0.43      0.30      3297
+           5       0.92      0.70      0.79     20440
+
+    accuracy                           0.63     30000
+   macro avg       0.44      0.49      0.45     30000
+weighted avg       0.74      0.63      0.67     30000
+
+
+============================================================
+Trainiere Modell 2: Multinomial Naive Bayes
+============================================================
+Accuracy (Naive Bayes): 0.7437
+
+Detaillierter Report:
+              precision    recall  f1-score   support
+
+           1       0.68      0.64      0.66      3053
+           2       0.15      0.00      0.00      1308
+           3       0.45      0.05      0.09      1902
+           4       0.35      0.04      0.08      3297
+           5       0.76      0.98      0.86     20440
+
+    accuracy                           0.74     30000
+   macro avg       0.48      0.34      0.34     30000
+weighted avg       0.66      0.74      0.67     30000
+
+
+Confusion Matrix als 'confusion_matrix_logreg.png' gespeichert.
